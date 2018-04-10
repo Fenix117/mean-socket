@@ -13,7 +13,7 @@ import 'rxjs/Rx'
 export class AppComponent implements OnInit{
   constructor(private appService: AppService){}
 
-  private title
+  title
 
 
   

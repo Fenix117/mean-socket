@@ -1,6 +1,8 @@
 {
   "name": "mean-socket",
-  "version": "0.0.0",
+  "version": "1.0.0",
+  "description": "Simple chat app - work in progress",
+  "main": "server.js",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -10,7 +12,18 @@
     "lint": "ng lint",
     "e2e": "ng e2e"
   },
+  "keywords": [
+    "example",
+    "chat",
+    "socket",
+    "mean",
+    "heroku"
+  ],
+  "author": "Michał Martyniuk",
   "private": true,
+  "engines": {
+    "node": "9.4.0"
+  },
   "dependencies": {
     "@angular/animations": "^5.2.0",
     "@angular/common": "^5.2.0",

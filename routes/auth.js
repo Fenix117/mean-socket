@@ -4,8 +4,10 @@ const mongoose = require('mongoose')
 const User = require('../models/user')
 const jwt = require('jsonwebtoken')
 const bcrypt = require('bcryptjs')
+const mongoURI = 'mongodb://fenix:Mich7m7m7m@ds151554.mlab.com:51554/means'
+const localDB =  'mongodb://localhost:27017/mean-socket'
 
-mongoose.connect('mongodb://localhost:27017/mean-socket')
+mongoose.connect(mongoURI)
   .then(
     ()=>console.log('Connected'),
     ()=>console.log(`Couldn't connect`)

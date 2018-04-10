@@ -16,9 +16,14 @@ export class ProfileComponent implements OnInit {
   
   ) { }
 
-  private username
-  private token
-  private userId
+  public username
+  public token
+  public userId
+
+  logout() {
+    localStorage.clear()
+    this.router.navigateByUrl('/home')
+  }
 
   getData() {
     this.authService.getUser(this.userId).subscribe( data => {
