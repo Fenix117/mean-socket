@@ -1,0 +1,15 @@
+<fieldset>
+  
+  <div class="chat-box">
+    <p *ngFor="let msg of messages">{{msg}}</p>
+  </div>
+  
+  <div class="form-group">
+    <input name="" id="" class="form-control" #msgInput> 
+    <div class="btn-group">
+      <button class="btn btn-lg btn-success" (click)="sendMsg(msgInput.value)">Send</button>
+      <button (click)="clearBox()" class="btn btn-lg btn-danger">Clear</button>
+    </div>
+    
+  </div>
+</fieldset>

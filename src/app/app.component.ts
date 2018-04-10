@@ -1,10 +1,25 @@
-import { Component } from '@angular/core';
+import { Component, OnInit, EventEmitter } from '@angular/core';
+import { HomeComponent } from './home/home.component';
+import { AppService } from './app.service';
+import 'rxjs/Rx'
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  styleUrls: ['./app.component.css'],
+  providers: [ AppService ]
+
 })
-export class AppComponent {
-  title = 'app';
+export class AppComponent implements OnInit{
+  constructor(private appService: AppService){}
+
+  private title
+
+
+  
+  ngOnInit() {
+    this.appService.title
+    .subscribe( data => this.title = data )
+  }
+
 }
